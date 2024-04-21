@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">PracticaApp</string>
+    <string name="saludo">Saludo</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string name="altura">Altura</string>
+    <string name="peso">Peso</string>
+    <string name="edad">Edad</string>
+    <string name="calcular">Calcular</string>
+    <string name="resultado">Resultado</string>
+    <string name="re_caulcular">Re-Caulcular</string>
+
+    <string name="error">Error</string>
+
+    <string name="titulo_bajo_peso">Bajo peso</string>
+    <string name="descripcion_bajo_peso">Estas por debajo de tu peso saludable de acuerdo con tu altura</string>
+
+    <string name="titulo_normal">Normal</string>
+    <string name="descripcion_normal">Estas en tu peso adecuado. Sigue asi!</string>
+
+    <string name="titulo_sobrepeso">Sobrepeso</string>
+    <string name="descripcion_sobrepeso">Estas por encima de tu peso saludable de acuerdo con tu altura</string>
+
+    <string name="titulo_obesidad">Obesidad</string>
+    <string name="descripcion_obesidad">Estas MUY por encima de tu peso saludable de acuerdo con tu altura</string>
+    <string name="titulo_todo">Tareas por hacer:</string>
+    <string name="categorias">Categorias:</string>
+    <string name="tareas">Tareas:</string>
+    <string name="agrega_tarea">Agrega una nueva tarea</string>
+    <string name="negocios">Negocios</string>
+    <string name="personal">Personal</string>
+    <string name="otro">Otro</string>
+    <string name="crear_tarea">Crear tarea</string>
+</resources>

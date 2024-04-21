@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app"
+    android:orientation="vertical"
+    tools:context=".tipApp.TipActivity">
+
+    <TextView
+        android:id="@+id/tvtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Calcular propina"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDinero"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="@color/background_component"
+        app:layout_constraintBottom_toTopOf="@id/cvPersonas"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvtitulo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Ingrese el monto total: "
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/etMontoTotal"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:background="@color/background_component_selected"
+                android:inputType="numberDecimal"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvPersonas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="@color/background_component"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toTopOf="@id/btnCalcularTip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvDinero">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Ingrese el numero de personas: "
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tvPersonas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="38sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/rsMonos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stepSize="1"
+                android:valueFrom="1"
+                android:valueTo="20" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnCalcularTip"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Calcular"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvPersonas" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

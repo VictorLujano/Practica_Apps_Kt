@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".convertidor.ConvertidorActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convertidor"
+        android:textColor="@color/todo_subtitle_text"
+        android:textSize="25sp"
+        android:layout_marginTop="16dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="32dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@color/background_component"
+        app:cardCornerRadius="20dp">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:layout_marginBottom="20dp"
+                android:text="Ingrese el peso: "
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <EditText
+                android:id="@+id/etCantidadPeso"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="32dp"
+                android:inputType="numberDecimal"
+                android:textColor="@color/white"
+                android:maxLines="1"
+                android:layout_marginHorizontal="16dp"
+                android:background="@color/background_component_selected" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                
+                <TextView
+                    android:id="@+id/tvUnidad1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KG"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/referencia"
+                    android:textColor="@color/white"
+                    />
+
+                <TextView
+                    android:id="@+id/referencia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A"
+                    android:textSize="36sp"
+                    app:layout_constraintStart_toEndOf="@id/tvUnidad1"
+                    app:layout_constraintEnd_toStartOf="@id/tvUnidad2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    />
+
+                <TextView
+                    android:id="@+id/tvUnidad2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LB"
+                    android:layout_gravity="end|end"
+                    app:layout_constraintStart_toEndOf="@id/referencia"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+                
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/btnSwitch"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_compare"
+                android:layout_marginBottom="30dp"
+                app:tint="@color/purple_200" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resultado: "
+                android:textColor="@color/todo_subtitle_text"
+                android:textSize="32sp"
+
+                />
+
+            <TextView
+                android:id="@+id/tvResultadoPeso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="29.09232"
+                android:textColor="@color/white"
+                android:textSize="50sp"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnCalcularMasa"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Calcular"
+        android:layout_margin="32dp"
+        />
+
+
+</LinearLayout>
