@@ -15,5 +15,7 @@ class ResultActivity : AppCompatActivity() {
 
         tvResult.text = "Hola $name"
 
+        // :D
+
     }
 }
